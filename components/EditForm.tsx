@@ -34,7 +34,7 @@ const EditForm = ({ _id, title, description }: IProps) => {
         return
       }
 
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/todo/${_id}`, {
+      const res = await fetch(`/api/todo/${_id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
