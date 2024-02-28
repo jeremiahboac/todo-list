@@ -15,7 +15,7 @@ const Todo = ({ _id, title, description }: ITodo) => {
     try {
       const confirmed = confirm('Are you sure you want to delete this to-do?')
       if(confirmed) {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}/api/todo?id=${id}`, {
+        const res = await fetch(`/api/todo?id=${id}`, {
           method: 'DELETE'
         })
     
