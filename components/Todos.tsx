@@ -19,6 +19,11 @@ const getTodos = async() => {
 
 
 const Todos = async() => {
+
+  if(!process.env.NEXT_PUBLIC_BASE_API_URL) {
+    return null
+  }
+
   const { todos } = await getTodos()
 
   if(!todos.length) {
